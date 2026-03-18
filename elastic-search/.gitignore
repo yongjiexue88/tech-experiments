@@ -1,0 +1,11 @@
+# Local environment
+.env
+.venv/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Generated benchmark artifacts
+data/*.jsonl
+results/*.json

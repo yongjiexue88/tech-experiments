@@ -1,0 +1,76 @@
+mix:
+  keyword_filters: 0.60
+  facets: 0.25
+  deep_pagination: 0.15
+
+limits:
+  result_size: 20
+  facet_size: 10
+  deep_offset: 5000
+  deep_size: 20
+  deep_precompute_batch: 1000
+  deep_template_count: 4
+
+terms:
+  common:
+    - wireless
+    - smart
+    - premium
+    - portable
+    - durable
+    - compact
+    - eco
+    - gaming
+    - pro
+    - classic
+  medium:
+    - ergonomic
+    - modular
+    - precision
+    - artisan
+    - ultralight
+    - balanced
+    - hybrid
+    - studio
+    - tactical
+    - thermal
+  rare:
+    - cryogenic
+    - antistatic
+    - photonic
+    - hyperlocal
+    - biodegradable
+    - retrofit
+    - noiseless
+    - aerospace
+
+categories:
+  - electronics
+  - books
+  - home
+  - beauty
+  - sports
+  - grocery
+  - automotive
+  - toys
+  - office
+  - fashion
+
+brands:
+  - apex
+  - nova
+  - zenith
+  - orbit
+  - lumen
+  - summit
+  - vector
+  - atlas
+  - quanta
+  - pixel
+
+price_ranges:
+  - [0, 25]
+  - [25, 75]
+  - [75, 150]
+  - [150, 300]
+  - [300, 600]

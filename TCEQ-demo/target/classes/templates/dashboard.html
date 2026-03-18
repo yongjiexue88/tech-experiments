@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCEQ Compliance Dashboard (Server-Rendered)</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__brand">
+                <div>
+                    <h1 class="header__title">TCEQ Compliance Dashboard</h1>
+                    <p class="header__subtitle">Server-Rendered View (Thymeleaf)</p>
+                </div>
+            </div>
+            <div class="header__actions">
+                <a href="/" class="btn btn--outline">← SPA Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Stats Cards -->
+        <section class="stats-grid">
+            <div class="stats-card">
+                <div class="stats-card__icon stats-card__icon--blue">📊</div>
+                <div class="stats-card__content">
+                    <span class="stats-card__value" th:text="${stats['totalFacilities']}">0</span>
+                    <span class="stats-card__label">Total Facilities</span>
+                </div>
+            </div>
+            <div class="stats-card">
+                <div class="stats-card__icon stats-card__icon--green">📄</div>
+                <div class="stats-card__content">
+                    <span class="stats-card__value" th:text="${stats['totalPermits']}">0</span>
+                    <span class="stats-card__label">Total Permits</span>
+                </div>
+            </div>
+            <div class="stats-card">
+                <div class="stats-card__icon stats-card__icon--red">⚠️</div>
+                <div class="stats-card__content">
+                    <span class="stats-card__value" th:text="${stats['openViolations']}">0</span>
+                    <span class="stats-card__label">Open Violations</span>
+                </div>
+            </div>
+            <div class="stats-card">
+                <div class="stats-card__icon stats-card__icon--amber">💰</div>
+                <div class="stats-card__content">
+                    <span class="stats-card__value"
+                        th:text="'$' + ${#numbers.formatInteger(stats['totalPenalties'], 1, 'COMMA')}">$0</span>
+                    <span class="stats-card__label">Total Penalties</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Table -->
+        <section class="card">
+            <div class="card__header">
+                <h2 class="card__title">Facility Compliance Overview</h2>
+            </div>
+            <div class="card__body table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Facility Name</th>
+                            <th>EPA ID</th>
+                            <th>Type</th>
+                            <th>City</th>
+                            <th>County</th>
+                            <th>Status</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="f : ${facilities}">
+                            <td><strong th:text="${f['facilityName']}"></strong></td>
+                            <td><code th:text="${f['epaId']}"></code></td>
+                            <td th:text="${f['facilityType']}"></td>
+                            <td th:text="${f['city']}"></td>
+                            <td th:text="${f['county']}"></td>
+                            <td>
+                                <span class="badge" th:classappend="'badge--' + ${f['status'].toLowerCase()}"
+                                    th:text="${f['status']}">
+                                </span>
+                            </td>
+                            <td>
+                                <span class="score-badge"
+                                    th:classappend="${f['complianceScore'] >= 80 ? 'score-badge--high' : (f['complianceScore'] >= 50 ? 'score-badge--medium' : 'score-badge--low')}"
+                                    th:text="${f['complianceScore']}">
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>TCEQ Compliance Tracker — Rendered with Thymeleaf (Server-Side)</p>
+    </footer>
+</body>
+
+</html>

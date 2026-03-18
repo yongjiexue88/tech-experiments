@@ -1,0 +1,5269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.interview.hibernate.HibernateIntegrationTest" time="4.72" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm/target/test-classes:/Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm/target/classes:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.3/spring-boot-starter-data-jpa-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.3/spring-boot-starter-aop-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-aop/6.1.4/spring-aop-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.3/spring-boot-starter-jdbc-3.2.3.jar:/Users/yongjiexue/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-jdbc/6.1.4/spring-jdbc-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar:/Users/yongjiexue/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/yongjiexue/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/yongjiexue/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/yongjiexue/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/yongjiexue/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/yongjiexue/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/Users/yongjiexue/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/yongjiexue/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/yongjiexue/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/yongjiexue/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/yongjiexue/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/yongjiexue/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/yongjiexue/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/yongjiexue/.m2/repository/org/springframework/data/spring-data-jpa/3.2.3/spring-data-jpa-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/data/spring-data-commons/3.2.3/spring-data-commons-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-orm/6.1.4/spring-orm-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-context/6.1.4/spring-context-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-expression/6.1.4/spring-expression-6.1.4.jar:/Users/yongjiexue/.m2/repository/io/micrometer/micrometer-observation/1.12.3/micrometer-observation-1.12.3.jar:/Users/yongjiexue/.m2/repository/io/micrometer/micrometer-commons/1.12.3/micrometer-commons-1.12.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-tx/6.1.4/spring-tx-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-beans/6.1.4/spring-beans-6.1.4.jar:/Users/yongjiexue/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-aspects/6.1.4/spring-aspects-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/hibernate/orm/hibernate-community-dialects/6.4.4.Final/hibernate-community-dialects-6.4.4.Final.jar:/Users/yongjiexue/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/yongjiexue/.m2/repository/org/xerial/sqlite-jdbc/3.45.1.0/sqlite-jdbc-3.45.1.0.jar:/Users/yongjiexue/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.3/spring-boot-starter-test-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.3/spring-boot-starter-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot/3.2.3/spring-boot-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.3/spring-boot-autoconfigure-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.3/spring-boot-starter-logging-3.2.3.jar:/Users/yongjiexue/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/yongjiexue/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/yongjiexue/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/yongjiexue/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/yongjiexue/.m2/repository/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12.jar:/Users/yongjiexue/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-test/3.2.3/spring-boot-test-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.3/spring-boot-test-autoconfigure-3.2.3.jar:/Users/yongjiexue/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/yongjiexue/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/yongjiexue/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/yongjiexue/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/yongjiexue/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/yongjiexue/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/yongjiexue/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/yongjiexue/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/yongjiexue/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/yongjiexue/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/yongjiexue/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/yongjiexue/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/yongjiexue/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/yongjiexue/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/yongjiexue/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/yongjiexue/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/yongjiexue/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/yongjiexue/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/yongjiexue/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar:/Users/yongjiexue/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/yongjiexue/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/yongjiexue/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/yongjiexue/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-core/6.1.4/spring-core-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-jcl/6.1.4/spring-jcl-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-test/6.1.4/spring-test-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="America/Chicago"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm/target/surefire/surefirebooter-20260318161923177_3.jar /Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm/target/surefire 2026-03-18T16-19-23_111-jvmRun1 surefire-20260318161923177_1tmp surefire_0-20260318161923177_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm/target/test-classes:/Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm/target/classes:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.3/spring-boot-starter-data-jpa-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.3/spring-boot-starter-aop-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-aop/6.1.4/spring-aop-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.3/spring-boot-starter-jdbc-3.2.3.jar:/Users/yongjiexue/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-jdbc/6.1.4/spring-jdbc-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar:/Users/yongjiexue/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/yongjiexue/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/yongjiexue/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/yongjiexue/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/yongjiexue/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/yongjiexue/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/Users/yongjiexue/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/yongjiexue/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/yongjiexue/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/yongjiexue/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/yongjiexue/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/yongjiexue/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/yongjiexue/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/yongjiexue/.m2/repository/org/springframework/data/spring-data-jpa/3.2.3/spring-data-jpa-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/data/spring-data-commons/3.2.3/spring-data-commons-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-orm/6.1.4/spring-orm-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-context/6.1.4/spring-context-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-expression/6.1.4/spring-expression-6.1.4.jar:/Users/yongjiexue/.m2/repository/io/micrometer/micrometer-observation/1.12.3/micrometer-observation-1.12.3.jar:/Users/yongjiexue/.m2/repository/io/micrometer/micrometer-commons/1.12.3/micrometer-commons-1.12.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-tx/6.1.4/spring-tx-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-beans/6.1.4/spring-beans-6.1.4.jar:/Users/yongjiexue/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-aspects/6.1.4/spring-aspects-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/hibernate/orm/hibernate-community-dialects/6.4.4.Final/hibernate-community-dialects-6.4.4.Final.jar:/Users/yongjiexue/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/yongjiexue/.m2/repository/org/xerial/sqlite-jdbc/3.45.1.0/sqlite-jdbc-3.45.1.0.jar:/Users/yongjiexue/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.3/spring-boot-starter-test-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.3/spring-boot-starter-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot/3.2.3/spring-boot-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.3/spring-boot-autoconfigure-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.3/spring-boot-starter-logging-3.2.3.jar:/Users/yongjiexue/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/yongjiexue/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/yongjiexue/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/yongjiexue/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/yongjiexue/.m2/repository/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12.jar:/Users/yongjiexue/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-test/3.2.3/spring-boot-test-3.2.3.jar:/Users/yongjiexue/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.3/spring-boot-test-autoconfigure-3.2.3.jar:/Users/yongjiexue/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/yongjiexue/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/yongjiexue/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/yongjiexue/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/yongjiexue/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/yongjiexue/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/yongjiexue/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/yongjiexue/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/yongjiexue/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/yongjiexue/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/yongjiexue/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/yongjiexue/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/yongjiexue/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/yongjiexue/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/yongjiexue/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/yongjiexue/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/yongjiexue/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/yongjiexue/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/yongjiexue/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar:/Users/yongjiexue/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/yongjiexue/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/yongjiexue/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/yongjiexue/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-core/6.1.4/spring-core-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-jcl/6.1.4/spring-jcl-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/springframework/spring-test/6.1.4/spring-test-6.1.4.jar:/Users/yongjiexue/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/yongjiexue"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm/target/surefire/surefirebooter-20260318161923177_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="25.0.2"/>
+    <property name="user.name" value="yongjiexue"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/yongjiexue/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/rr/7c8frtm55gjd70k9g3zhq77m0000gn/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="/Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="37687"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/yongjiexue/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="25.0.2"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testCascadePersist" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.678">
+    <system-out><![CDATA[16:19:23.826 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.interview.hibernate.HibernateIntegrationTest]: HibernateIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:19:23.891 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.interview.hibernate.InterviewApp for test class com.interview.hibernate.HibernateIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+16:19:24.277 [main] INFO  c.i.h.HibernateIntegrationTest - Starting HibernateIntegrationTest using Java 25.0.2 with PID 37687 (started by yongjiexue in /Users/yongjiexue/Documents/GitHub/tech-experiments/hibernate-orm)
+16:19:24.278 [main] INFO  c.i.h.HibernateIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+16:19:24.852 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:19:24.902 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+16:19:25.135 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:19:25.173 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+16:19:25.194 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+16:19:25.342 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:19:25.360 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:19:25.844 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@682e422c
+16:19:25.847 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:19:26.714 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:19:26.863 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists departments
+Hibernate: 
+    drop table if exists departments
+16:19:26.865 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists employee_projects
+Hibernate: 
+    drop table if exists employee_projects
+16:19:26.865 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists employees
+Hibernate: 
+    drop table if exists employees
+16:19:26.865 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists projects
+Hibernate: 
+    drop table if exists projects
+16:19:26.868 [main] DEBUG org.hibernate.SQL - 
+    create table departments (
+        created_at timestamp,
+        id integer,
+        updated_at timestamp,
+        name varchar(100) not null unique,
+        description varchar(500),
+        primary key (id)
+    )
+Hibernate: 
+    create table departments (
+        created_at timestamp,
+        id integer,
+        updated_at timestamp,
+        name varchar(100) not null unique,
+        description varchar(500),
+        primary key (id)
+    )
+16:19:26.869 [main] DEBUG org.hibernate.SQL - 
+    create table employee_projects (
+        employee_id bigint not null,
+        project_id bigint not null,
+        primary key (employee_id, project_id)
+    )
+Hibernate: 
+    create table employee_projects (
+        employee_id bigint not null,
+        project_id bigint not null,
+        primary key (employee_id, project_id)
+    )
+16:19:26.869 [main] DEBUG org.hibernate.SQL - 
+    create table employees (
+        salary numeric(10,2),
+        version integer,
+        dept_id bigint,
+        id integer,
+        status varchar(20) not null check (status in ('ACTIVE','INACTIVE','ON_LEAVE','TERMINATED')),
+        first_name varchar(50) not null,
+        last_name varchar(50) not null,
+        email varchar(150) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table employees (
+        salary numeric(10,2),
+        version integer,
+        dept_id bigint,
+        id integer,
+        status varchar(20) not null check (status in ('ACTIVE','INACTIVE','ON_LEAVE','TERMINATED')),
+        first_name varchar(50) not null,
+        last_name varchar(50) not null,
+        email varchar(150) not null unique,
+        primary key (id)
+    )
+16:19:26.870 [main] DEBUG org.hibernate.SQL - 
+    create table projects (
+        active boolean not null,
+        end_date date,
+        start_date date,
+        id integer,
+        project_code varchar(20) not null unique,
+        name varchar(200) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table projects (
+        active boolean not null,
+        end_date date,
+        start_date date,
+        id integer,
+        project_code varchar(20) not null unique,
+        name varchar(200) not null,
+        primary key (id)
+    )
+16:19:26.870 [main] DEBUG org.hibernate.SQL - 
+    create index idx_employee_dept 
+       on employees (dept_id)
+Hibernate: 
+    create index idx_employee_dept 
+       on employees (dept_id)
+16:19:26.872 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:19:27.188 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+16:19:27.465 [main] INFO  c.i.h.HibernateIntegrationTest - Started HibernateIntegrationTest in 3.5 seconds (process running for 4.225)
+16:19:28.032 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.042 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.045 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.056 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.057 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.049078]
+16:19:28.058 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.049078]
+16:19:28.058 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Software development]
+16:19:28.058 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Engineering]
+16:19:28.058 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.062 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.062 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.062 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.062 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alice]
+16:19:28.062 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.062 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000.00]
+16:19:28.062 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.062 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.062 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.063 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.063 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.063 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.063 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.063 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.063 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [85000.00]
+16:19:28.063 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.063 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.063 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.063 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.063842]
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.063842]
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Brand and growth]
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Marketing]
+16:19:28.064 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.064 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [carol@example.com]
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Carol]
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Williams]
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [75000.00]
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ON_LEAVE]
+16:19:28.064 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.065 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.067 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.067 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.067 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.067 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Alpha]
+16:19:28.067 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-001]
+16:19:28.067 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-01-15]
+16:19:28.068 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.069 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.069 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.069 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.069 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Beta]
+16:19:28.069 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-002]
+16:19:28.069 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-06-01]
+16:19:28.069 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.088 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.089 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.090 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+16:19:28.090 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.091 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.092 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.093 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.093 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.093 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.103 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.138 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0 
+    where
+        d1_0.id=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0 
+    where
+        d1_0.id=?
+16:19:28.138 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.140 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.140 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/yongjiexue/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="testAuditInfoLifecycleCallback" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.028">
+    <system-out><![CDATA[16:19:28.158 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.165 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.165 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.166 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.166 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.166 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.166 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.167 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.167 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.167 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.167 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.167 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.167 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.167 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.167 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.167 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.168 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.169 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.169 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.169 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.169 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.170 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.170 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.170 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.171 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.171 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.171 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.171 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.171 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.171 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.172 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.172 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.172222]
+16:19:28.172 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.172222]
+16:19:28.172 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Software development]
+16:19:28.172 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Engineering]
+16:19:28.172 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.173 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.173 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.173 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.173 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alice]
+16:19:28.173 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.173 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000.00]
+16:19:28.173 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.173 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.173 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.173 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.173 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.173 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.174 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.174 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.174 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [85000.00]
+16:19:28.174 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.174 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.174 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.174 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.174 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.174426]
+16:19:28.174 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.174426]
+16:19:28.174 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Brand and growth]
+16:19:28.174 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Marketing]
+16:19:28.174 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.175 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [carol@example.com]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Carol]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Williams]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [75000.00]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ON_LEAVE]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.175 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.175 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Alpha]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-001]
+16:19:28.175 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-01-15]
+16:19:28.175 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.176 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.176 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.176 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.176 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Beta]
+16:19:28.176 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-002]
+16:19:28.176 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-06-01]
+16:19:28.176 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.176 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.176 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.177 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+16:19:28.177 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.177 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.177 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.177 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.177 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.177 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.178 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testManyToManyRelationship" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.045">
+    <system-out><![CDATA[16:19:28.184 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.186 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.186 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.186 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.186 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.186 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.187 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.187 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.187 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.187 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.188 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.188 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.188 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.188 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.188 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.188 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.189 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.190 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.190 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.190 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.191 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.192 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.193 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.193 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.193 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.193 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.193 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.193 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.194 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.194 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.194 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.194 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.194595]
+16:19:28.194 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.194595]
+16:19:28.194 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Software development]
+16:19:28.194 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Engineering]
+16:19:28.195 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.195 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alice]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000.00]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.195 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.195 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [85000.00]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.195 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.195 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.196 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.196114]
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.196114]
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Brand and growth]
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Marketing]
+16:19:28.196 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.196 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [carol@example.com]
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Carol]
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Williams]
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [75000.00]
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ON_LEAVE]
+16:19:28.196 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.196 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.197 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.197 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.197 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.197 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Alpha]
+16:19:28.197 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-001]
+16:19:28.197 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-01-15]
+16:19:28.197 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.197 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.197 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.197 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.197 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Beta]
+16:19:28.197 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-002]
+16:19:28.198 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-06-01]
+16:19:28.198 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.198 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.198 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.198 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+16:19:28.198 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.198 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.198 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.198 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.199 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.199 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.223 [main] DEBUG org.hibernate.SQL - 
+    select
+        distinct e1_0.id,
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        p1_0.employee_id,
+        p1_1.id,
+        p1_1.active,
+        p1_1.end_date,
+        p1_1.name,
+        p1_1.project_code,
+        p1_1.start_date,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    left join
+        departments d1_0 
+            on d1_0.id=e1_0.dept_id 
+    left join
+        employee_projects p1_0 
+            on e1_0.id=p1_0.employee_id 
+    left join
+        projects p1_1 
+            on p1_1.id=p1_0.project_id 
+    order by
+        e1_0.last_name
+Hibernate: 
+    select
+        distinct e1_0.id,
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        p1_0.employee_id,
+        p1_1.id,
+        p1_1.active,
+        p1_1.end_date,
+        p1_1.name,
+        p1_1.project_code,
+        p1_1.start_date,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    left join
+        departments d1_0 
+            on d1_0.id=e1_0.dept_id 
+    left join
+        employee_projects p1_0 
+            on e1_0.id=p1_0.employee_id 
+    left join
+        projects p1_1 
+            on p1_1.id=p1_0.project_id 
+    order by
+        e1_0.last_name
+]]></system-out>
+  </testcase>
+  <testcase name="testJoinFetch" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.015">
+    <system-out><![CDATA[16:19:28.229 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.230 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.230 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.230 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.230 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.230 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.230 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.230 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.230 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.230 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.230 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.231 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.231 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.231 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.231 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.231 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.231 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.232 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.232 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.232 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.232 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.233 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.233 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.233 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.234 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.234 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.234 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.234 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.234 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.234 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.234 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.234900]
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.234900]
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Software development]
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Engineering]
+16:19:28.235 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.235 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alice]
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000.00]
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.235 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.235 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.236 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [85000.00]
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.236 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.236 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.236484]
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.236484]
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Brand and growth]
+16:19:28.236 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Marketing]
+16:19:28.236 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.237 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [carol@example.com]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Carol]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Williams]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [75000.00]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ON_LEAVE]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.237 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.237 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Alpha]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-001]
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-01-15]
+16:19:28.237 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.237 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.237 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.238 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.238 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Beta]
+16:19:28.238 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-002]
+16:19:28.238 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-06-01]
+16:19:28.238 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.238 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.238 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.238 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+16:19:28.238 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.239 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.239 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.239 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.239 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.239 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.240 [main] DEBUG org.hibernate.SQL - 
+    select
+        distinct e1_0.id,
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    left join
+        departments d1_0 
+            on d1_0.id=e1_0.dept_id 
+    order by
+        e1_0.last_name
+Hibernate: 
+    select
+        distinct e1_0.id,
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    left join
+        departments d1_0 
+            on d1_0.id=e1_0.dept_id 
+    order by
+        e1_0.last_name
+]]></system-out>
+  </testcase>
+  <testcase name="testDirtyChecking" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.024">
+    <system-out><![CDATA[16:19:28.245 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.246 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.246 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.246 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.246 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.246 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.246 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.246 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.246 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.246 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.246 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.246 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.246 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.247 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.247 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.247 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.248 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.248 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.248 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.248 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.248 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.249 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.250 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.251 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.251 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.252 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.252 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.252 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.252 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.252 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.253 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.253 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.253573]
+16:19:28.253 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.253573]
+16:19:28.253 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Software development]
+16:19:28.253 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Engineering]
+16:19:28.254 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.254 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alice]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000.00]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.254 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.254 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [85000.00]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.254 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.254 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.255 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.255115]
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.255115]
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Brand and growth]
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Marketing]
+16:19:28.255 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.255 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [carol@example.com]
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Carol]
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Williams]
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [75000.00]
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ON_LEAVE]
+16:19:28.255 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.255 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.256 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Alpha]
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-001]
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-01-15]
+16:19:28.256 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.256 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Beta]
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-002]
+16:19:28.256 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-06-01]
+16:19:28.256 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.257 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.257 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.257 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+16:19:28.257 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.257 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.257 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.257 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.257 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.257 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.258 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.262 [main] DEBUG org.hibernate.SQL - 
+    update
+        employees 
+    set
+        dept_id=?,
+        email=?,
+        first_name=?,
+        last_name=?,
+        salary=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    update
+        employees 
+    set
+        dept_id=?,
+        email=?,
+        first_name=?,
+        last_name=?,
+        salary=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+16:19:28.262 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.262 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.262 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.262 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.262 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [90000.00]
+16:19:28.262 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.262 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [1]
+16:19:28.262 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:BIGINT) <- [2]
+16:19:28.262 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (9:INTEGER) <- [0]
+16:19:28.263 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testOptimisticLockingVersionIncrement" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.018">
+    <system-out><![CDATA[16:19:28.269 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.272 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.272 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.272 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.272 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.273 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.273 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.273 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.273 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.273 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.273 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.273 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.273 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+16:19:28.273 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.273 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.273 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.274 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.275 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.275 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.275 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.275 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.275 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.276 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.276 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.276 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.276 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.276 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.276 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.276 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.276 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.277 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.277 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.277434]
+16:19:28.277 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.277434]
+16:19:28.277 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Software development]
+16:19:28.277 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Engineering]
+16:19:28.277 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.277 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alice]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000.00]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.278 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.278 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [85000.00]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.278 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.278 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.278571]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.278571]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Brand and growth]
+16:19:28.278 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Marketing]
+16:19:28.278 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.278 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [carol@example.com]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Carol]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Williams]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [75000.00]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ON_LEAVE]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.279 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.279 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Alpha]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-001]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-01-15]
+16:19:28.279 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.279 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Beta]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-002]
+16:19:28.279 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-06-01]
+16:19:28.279 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.280 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.280 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.280 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+16:19:28.280 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.280 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.280 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.280 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.280 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.280 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.280 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.282 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+16:19:28.282 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.283 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.284 [main] DEBUG org.hibernate.SQL - 
+    update
+        employees 
+    set
+        dept_id=?,
+        email=?,
+        first_name=?,
+        last_name=?,
+        salary=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    update
+        employees 
+    set
+        dept_id=?,
+        email=?,
+        first_name=?,
+        last_name=?,
+        salary=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alicia]
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000]
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [1]
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:BIGINT) <- [1]
+16:19:28.284 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (9:INTEGER) <- [0]
+16:19:28.285 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+16:19:28.285 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+]]></system-out>
+  </testcase>
+  <testcase name="testNaturalIdLookup" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.017">
+    <system-out><![CDATA[16:19:28.288 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.290 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.290 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.290 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.290 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.290 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.290 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.290 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.290 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.290 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+16:19:28.290 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.290 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.290 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.291 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.291 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.291 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.291 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.292 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.292 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.292 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.292 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.293 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.293 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.293 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.294 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.294 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.294 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.294 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.294 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.294 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.295 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.294919]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.294919]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Software development]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Engineering]
+16:19:28.295 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.295 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alice]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000.00]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.295 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.295 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [85000.00]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.295 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.295 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.296 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.296096]
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.296096]
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Brand and growth]
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Marketing]
+16:19:28.296 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.296 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [carol@example.com]
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Carol]
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Williams]
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [75000.00]
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ON_LEAVE]
+16:19:28.296 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.296 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.297 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Alpha]
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-001]
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-01-15]
+16:19:28.297 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.297 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Beta]
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-002]
+16:19:28.297 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-06-01]
+16:19:28.297 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.298 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.298 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.298 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+16:19:28.298 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.298 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.298 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.298 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.298 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.298 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.302 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0 
+    where
+        p1_0.project_code=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0 
+    where
+        p1_0.project_code=?
+16:19:28.302 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [PRJ-001]
+]]></system-out>
+  </testcase>
+  <testcase name="testNamedQuery" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.014">
+    <system-out><![CDATA[16:19:28.305 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.306 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.306 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.306 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.306 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.306 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.306 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.306 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.306 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.306 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.306 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.306 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.306 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.306 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.306 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.306 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.307 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.307 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.307 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.307 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.307 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.308 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.308 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.308 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.308 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.308 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.309 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.309 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.309 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.309 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.309 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.309 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.309755]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.309755]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Software development]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Engineering]
+16:19:28.310 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.310 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alice]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000.00]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.310 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.310 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [85000.00]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.310 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.310 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.310748]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.310748]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Brand and growth]
+16:19:28.310 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Marketing]
+16:19:28.310 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.311 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [carol@example.com]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Carol]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Williams]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [75000.00]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ON_LEAVE]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.311 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.311 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Alpha]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-001]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-01-15]
+16:19:28.311 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.311 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Beta]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-002]
+16:19:28.311 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-06-01]
+16:19:28.311 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.312 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.312 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.312 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+16:19:28.312 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.312 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.312 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.312 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.312 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.312 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.317 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0 
+    where
+        p1_0.active=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0 
+    where
+        p1_0.active=?
+16:19:28.317 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+]]></system-out>
+  </testcase>
+  <testcase name="testServiceCreateDepartment" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.014">
+    <system-out><![CDATA[16:19:28.320 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.321 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.321 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.321 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.321 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.321 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.321 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.321 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.321 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.321 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.322 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.322 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.322 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.322 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.322 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+16:19:28.322 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.323 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.324 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.324 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.324 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        projects 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        projects 
+    where
+        id=?
+16:19:28.324 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.325 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.326 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.326 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.326 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.326 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.326 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.326 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.326 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.326 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.329 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.328879]
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.328879]
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Infrastructure team]
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [DevOps]
+16:19:28.329 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.329 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [dan@example.com]
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Dan]
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Davis]
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [88000.00]
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.329 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.329 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.330 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.330 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.330 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [eve@example.com]
+16:19:28.330 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Eve]
+16:19:28.330 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Evans]
+16:19:28.330 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [92000.00]
+16:19:28.330 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.330 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.330 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.331 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0 
+    where
+        d1_0.id=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0 
+    where
+        d1_0.id=?
+16:19:28.331 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.331 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.331 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+]]></system-out>
+  </testcase>
+  <testcase name="testServiceFullyLoadedEmployee" classname="com.interview.hibernate.HibernateIntegrationTest" time="0.029">
+    <system-out><![CDATA[16:19:28.336 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.338 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.338 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.338 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+Hibernate: 
+    delete 
+    from
+        employee_projects 
+    where
+        employee_id=?
+16:19:28.338 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.338 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.338 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.338 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.338 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=? 
+        and version=?
+16:19:28.338 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.338 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+16:19:28.340 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.active,
+        p1_0.end_date,
+        p1_0.name,
+        p1_0.project_code,
+        p1_0.start_date 
+    from
+        projects p1_0
+16:19:28.340 [main] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name 
+    from
+        departments d1_0
+16:19:28.342 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+Hibernate: 
+    select
+        e1_0.dept_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    where
+        e1_0.dept_id=?
+16:19:28.342 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.342 [main] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        departments 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        departments 
+    where
+        id=?
+16:19:28.342 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.343 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.343 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.343464]
+16:19:28.343 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.343464]
+16:19:28.343 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Software development]
+16:19:28.343 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Engineering]
+16:19:28.344 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.344 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.344 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.344 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [alice@example.com]
+16:19:28.344 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Alice]
+16:19:28.344 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Johnson]
+16:19:28.344 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [95000.00]
+16:19:28.344 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.344 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.344 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.345 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.345 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.345 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bob@example.com]
+16:19:28.345 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Bob]
+16:19:28.345 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Smith]
+16:19:28.345 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [85000.00]
+16:19:28.345 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ACTIVE]
+16:19:28.345 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.345 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.346 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        departments
+        (created_at, updated_at, description, name) 
+    values
+        (?, ?, ?, ?)
+16:19:28.346 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:TIMESTAMP) <- [2026-03-18T16:19:28.345510]
+16:19:28.346 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-03-18T16:19:28.345510]
+16:19:28.346 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Brand and growth]
+16:19:28.346 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Marketing]
+16:19:28.346 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.347 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        employees
+        (dept_id, email, first_name, last_name, salary, status, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+16:19:28.347 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.347 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [carol@example.com]
+16:19:28.347 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Carol]
+16:19:28.347 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [Williams]
+16:19:28.347 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:NUMERIC) <- [75000.00]
+16:19:28.347 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:VARCHAR) <- [ON_LEAVE]
+16:19:28.347 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:INTEGER) <- [0]
+16:19:28.347 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.347 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.348 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.348 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.348 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Alpha]
+16:19:28.348 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-001]
+16:19:28.348 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-01-15]
+16:19:28.348 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.348 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        projects
+        (active, end_date, name, project_code, start_date) 
+    values
+        (?, ?, ?, ?, ?)
+16:19:28.348 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BOOLEAN) <- [true]
+16:19:28.348 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:DATE) <- [null]
+16:19:28.348 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Project Beta]
+16:19:28.348 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [PRJ-002]
+16:19:28.349 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:DATE) <- [2024-06-01]
+16:19:28.349 [main] DEBUG org.hibernate.SQL - 
+    select
+        last_insert_rowid()
+Hibernate: 
+    select
+        last_insert_rowid()
+16:19:28.351 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.351 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.351 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+16:19:28.351 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.351 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+16:19:28.351 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.352 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        employee_projects
+        (employee_id, project_id) 
+    values
+        (?, ?)
+16:19:28.352 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [2]
+16:19:28.352 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+16:19:28.353 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.dept_id,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0
+16:19:28.360 [main] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        p1_0.employee_id,
+        p1_1.id,
+        p1_1.active,
+        p1_1.end_date,
+        p1_1.name,
+        p1_1.project_code,
+        p1_1.start_date,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    left join
+        departments d1_0 
+            on d1_0.id=e1_0.dept_id 
+    left join
+        employee_projects p1_0 
+            on e1_0.id=p1_0.employee_id 
+    left join
+        projects p1_1 
+            on p1_1.id=p1_0.project_id 
+    where
+        e1_0.id=?
+Hibernate: 
+    select
+        e1_0.id,
+        d1_0.id,
+        d1_0.created_at,
+        d1_0.updated_at,
+        d1_0.description,
+        d1_0.name,
+        e1_0.email,
+        e1_0.first_name,
+        e1_0.last_name,
+        p1_0.employee_id,
+        p1_1.id,
+        p1_1.active,
+        p1_1.end_date,
+        p1_1.name,
+        p1_1.project_code,
+        p1_1.start_date,
+        e1_0.salary,
+        e1_0.status,
+        e1_0.version 
+    from
+        employees e1_0 
+    left join
+        departments d1_0 
+            on d1_0.id=e1_0.dept_id 
+    left join
+        employee_projects p1_0 
+            on e1_0.id=p1_0.employee_id 
+    left join
+        projects p1_1 
+            on p1_1.id=p1_0.project_id 
+    where
+        e1_0.id=?
+16:19:28.360 [main] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+]]></system-out>
+  </testcase>
+</testsuite>

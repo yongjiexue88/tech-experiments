@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Search Benchmark Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg: #f8f5f0;
+      --panel: #ffffff;
+      --ink: #1a2a33;
+      --muted: #5e6e78;
+      --accent-a: #0f8b8d;
+      --accent-b: #ee6c4d;
+      --accent-c: #3d5a80;
+      --line: #d7dde2;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top left, #fff7ec 0%, var(--bg) 55%);
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      letter-spacing: 0.2px;
+    }
+
+    .sub {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin-bottom: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 4px 20px rgba(20, 20, 20, 0.04);
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+
+    .row {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 980px) {
+      .row.two {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      background: var(--panel);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    th {
+      background: #f0f4f7;
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    canvas {
+      max-height: 320px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Elasticsearch vs Postgres FTS</h1>
+    <p class="sub">Local benchmark dashboard</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Dataset</h3>
+        <p>50000</p>
+      </div>
+      <div class="card">
+        <h3>Concurrency</h3>
+        <p>8</p>
+      </div>
+      <div class="card">
+        <h3>Measured Duration</h3>
+        <p>20s</p>
+      </div>
+      
+        <div class="card">
+          <h3>Correctness</h3>
+          <p><strong>Passed:</strong> True</p>
+          <p><strong>Top-20 overlap:</strong> 1.0</p>
+          <p><strong>Queries checked:</strong> 20</p>
+        </div>
+        
+    </div>
+
+    <div class="row two">
+      <div class="card">
+        <h3>P95 Latency (ms)</h3>
+        <canvas id="latencyChart"></canvas>
+      </div>
+      <div class="card">
+        <h3>QPS</h3>
+        <canvas id="qpsChart"></canvas>
+      </div>
+    </div>
+
+    <div class="row two">
+      <div class="card">
+        <h3>P95 Latency Improvement (%)</h3>
+        <canvas id="p95GainChart"></canvas>
+      </div>
+      <div class="card">
+        <h3>QPS Improvement (%)</h3>
+        <canvas id="qpsGainChart"></canvas>
+      </div>
+    </div>
+
+    <div class="row">
+      <table>
+        <thead>
+          <tr>
+            <th>Workload</th>
+            <th>Postgres P95</th>
+            <th>Elastic P95</th>
+            <th>P95 Improve</th>
+            <th>Postgres QPS</th>
+            <th>Elastic QPS</th>
+            <th>QPS Improve</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <td>Keyword + Filters</td>
+          <td>1244.39</td>
+          <td>305.36</td>
+          <td>75.46%</td>
+          <td>9.30</td>
+          <td>36.70</td>
+          <td>294.62%</td>
+        </tr>
+<tr>
+          <td>Facets</td>
+          <td>2544.50</td>
+          <td>340.48</td>
+          <td>86.62%</td>
+          <td>3.70</td>
+          <td>14.55</td>
+          <td>293.24%</td>
+        </tr>
+<tr>
+          <td>Deep Pagination</td>
+          <td>11810.55</td>
+          <td>287.38</td>
+          <td>97.57%</td>
+          <td>2.15</td>
+          <td>9.35</td>
+          <td>334.88%</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="footer">Generated at 2026-02-22T19:43:59+00:00</p>
+  </div>
+
+  <script>
+    const labels = ["Keyword + Filters", "Facets", "Deep Pagination"];
+    const pgP95 = [1244.392, 2544.502, 11810.554];
+    const esP95 = [305.356, 340.481, 287.378];
+    const pgQps = [9.3, 3.7, 2.15];
+    const esQps = [36.7, 14.55, 9.35];
+    const p95Gain = [75.46143016027104, 86.61895333546603, 97.5667695181784];
+    const qpsGain = [294.6236559139785, 293.2432432432432, 334.8837209302325];
+
+    const commonOpts = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom' }
+      }
+    };
+
+    new Chart(document.getElementById('latencyChart'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [
+          { label: 'Postgres', data: pgP95, backgroundColor: '#ee6c4d' },
+          { label: 'Elasticsearch', data: esP95, backgroundColor: '#0f8b8d' }
+        ]
+      },
+      options: commonOpts
+    });
+
+    new Chart(document.getElementById('qpsChart'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [
+          { label: 'Postgres', data: pgQps, backgroundColor: '#ee6c4d' },
+          { label: 'Elasticsearch', data: esQps, backgroundColor: '#0f8b8d' }
+        ]
+      },
+      options: commonOpts
+    });
+
+    new Chart(document.getElementById('p95GainChart'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [
+          { label: 'P95 improvement %', data: p95Gain, backgroundColor: '#3d5a80' }
+        ]
+      },
+      options: commonOpts
+    });
+
+    new Chart(document.getElementById('qpsGainChart'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [
+          { label: 'QPS improvement %', data: qpsGain, backgroundColor: '#3d5a80' }
+        ]
+      },
+      options: commonOpts
+    });
+  </script>
+</body>
+</html>
